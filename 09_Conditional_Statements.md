@@ -1,17 +1,22 @@
-# 📘 Topic 09: Conditional Statements (if, elif, else)
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Topic 09](https://img.shields.io/badge/Topic_09-Conditional_Statements-00897B?style=for-the-badge)
+![Beginner-Intermediate](https://img.shields.io/badge/Level-Beginner--Intermediate-2196F3?style=for-the-badge)
+
+</div>
 
 ---
 
-## 🧠 What are Conditional Statements?
+## What are Conditional Statements?
 
-Conditional statements let your program **make decisions**.
-Think of it like a fork in the road — Python chooses which path to take based on a condition.
+Conditional statements let your program **make decisions** — like a fork in the road where Python chooses which path to take based on a condition.
 
 ---
 
-## ✅ 1. The `if` Statement
+## 1. The `if` Statement
 
-Runs a block of code **only if the condition is True**:
+Runs code **only if the condition is True**:
 
 ```python
 num = 10
@@ -24,15 +29,12 @@ print("Program Ended")
 # Program Ended
 ```
 
-> 📝 **Key Point:** The code **inside the if** (indented) only runs when the condition is True.
-> The code **after the if** (not indented) always runs.
+> [!NOTE]
+> The code **inside the if** (indented) only runs when the condition is True. Code **after the if** (not indented) always runs.
 
 ---
 
-## 🔀 2. The `if-else` Statement
-
-If the condition is True → run the `if` block.
-If the condition is False → run the `else` block.
+## 2. The `if-else` Statement
 
 ```python
 age = 15
@@ -44,7 +46,8 @@ else:
 # Output: Not Eligible to Vote
 ```
 
-### Example — Even or Odd:
+### Even or Odd
+
 ```python
 num = int(input("Enter a number: "))
 if num % 2 == 0:
@@ -55,9 +58,9 @@ else:
 
 ---
 
-## 🔀🔀 3. The `if-elif-else` Statement (Multiple Conditions)
+## 3. The `if-elif-else` Statement
 
-When you have **more than 2 options**, use `elif` (else if):
+When you have **more than 2 options**:
 
 ```python
 marks = int(input("Enter Your Marks: "))
@@ -74,58 +77,36 @@ else:
     print("Fail")
 ```
 
-> 💡 **How it works:**
-> - Python checks each condition **from top to bottom**
-> - It runs the **first block** where the condition is True
-> - If **none** are True, it runs the `else` block
+> [!TIP]
+> Python checks each condition **from top to bottom**, runs the **first block** where the condition is True, then skips the rest.
 
 ---
 
-## 🎯 Real-World Examples
+## Real-World Examples
 
-### 1. Simple Calculator:
+### Simple Calculator
+
 ```python
-print("1. Addition")
-print("2. Subtraction")
-print("3. Multiplication")
-print("4. Division")
-print("5. Modulo")
-
-choice = int(input("Enter your choice: "))
-num1 = int(input("Enter First Number: "))
-num2 = int(input("Enter Second Number: "))
+choice = int(input("Enter choice (1-5): "))
+num1 = int(input("First Number: "))
+num2 = int(input("Second Number: "))
 
 if choice == 1:
-    print(f"Addition: {num1} + {num2} = {num1 + num2}")
+    print(f"Addition: {num1 + num2}")
 elif choice == 2:
-    print(f"Subtraction: {num1} - {num2} = {num1 - num2}")
+    print(f"Subtraction: {num1 - num2}")
 elif choice == 3:
-    print(f"Multiplication: {num1} * {num2} = {num1 * num2}")
+    print(f"Multiplication: {num1 * num2}")
 elif choice == 4:
-    print(f"Division: {num1} / {num2} = {num1 / num2}")
+    print(f"Division: {num1 / num2}")
 elif choice == 5:
-    print(f"Modulo: {num1} % {num2} = {num1 % num2}")
+    print(f"Modulo: {num1 % num2}")
 else:
     print("Invalid Choice")
 ```
 
-### 2. Discount Calculator:
-```python
-amount = int(input("Enter the amount: "))
+### ATM Withdrawal
 
-if amount >= 10000:
-    discount = amount * 10 // 100    # 10% discount
-elif amount > 5000:
-    discount = amount * 5 // 100     # 5% discount
-elif amount > 1000:
-    discount = amount * 2 // 100     # 2% discount
-else:
-    discount = 0
-
-print(f"Discount: {discount}, Total Bill: {amount - discount}")
-```
-
-### 3. ATM Withdrawal:
 ```python
 balance = 5000
 withdrawal = 2000
@@ -136,13 +117,10 @@ if withdrawal <= balance:
     print("Remaining Balance:", balance)
 else:
     print("Insufficient Balance")
-
-# Output:
-# Withdrawal Successful
-# Remaining Balance: 3000
 ```
 
-### 4. Login System:
+### Login System
+
 ```python
 username = "admin123"
 password = "Python@123"
@@ -155,34 +133,33 @@ else:
 
 ---
 
-## ⚡ Important Concepts
+## Important Concepts
 
-### Indentation Matters!
-In Python, **indentation (spaces/tabs)** defines which code belongs to which block:
+### Indentation Matters
 
 ```python
 if True:
-    print("This is inside the if")     # ← 4 spaces indent
-    print("This too")                   # ← 4 spaces indent
-print("This is outside the if")        # ← No indent
+    print("Inside the if")     # ← 4 spaces indent
+    print("This too")          # ← 4 spaces indent
+print("Outside the if")       # ← No indent
 ```
 
-> ⚠️ **Warning:** Incorrect indentation will cause an `IndentationError`!
+> [!CAUTION]
+> Incorrect indentation causes an `IndentationError`!
 
-### Using `and` / `or` in Conditions:
+### Using `and` / `or`
+
 ```python
-# Both conditions must be True
 if age >= 18 and has_id == True:
     print("Can vote")
 
-# At least one condition must be True
 if is_student or is_senior:
     print("Eligible for discount")
 ```
 
 ---
 
-## 📊 Flowchart
+## Flowchart
 
 ```
          ┌──────────┐
@@ -200,13 +177,18 @@ if is_student or is_senior:
 
 ---
 
-## 🧪 Quick Practice
+## Practice Exercises
 
-1. Write a program to check if a number is positive, negative, or zero
+1. Check if a number is positive, negative, or zero
 2. Create a grading system: A (90+), B (80+), C (70+), D (60+), Fail (<60)
-3. Write a login system that accepts username and password
-4. Create a simple calculator using if-elif-else
+3. Write a login system with username and password
+4. Build a simple calculator using if-elif-else
 
 ---
 
-*← [08 — Sets](./08_Sets.md) | Next: [10 — Loops →](./10_Loops.md)*
+<div align="center">
+
+[![Previous](https://img.shields.io/badge/←_Previous-08_Sets-2196F3?style=for-the-badge)](./08_Sets.md)
+[![Next](https://img.shields.io/badge/Next_→-10_Loops-2196F3?style=for-the-badge)](./10_Loops.md)
+
+</div>

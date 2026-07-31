@@ -1,10 +1,16 @@
-# 📘 Topic 07: Dictionaries in Python
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Topic 07](https://img.shields.io/badge/Topic_07-Dictionaries-7B1FA2?style=for-the-badge)
+![Beginner-Intermediate](https://img.shields.io/badge/Level-Beginner--Intermediate-2196F3?style=for-the-badge)
+
+</div>
 
 ---
 
-## 🧠 What is a Dictionary?
+## What is a Dictionary?
 
-A **dictionary** stores data in **key-value pairs** — like a real dictionary where a **word (key)** has a **meaning (value)**.
+A **dictionary** stores data in **key-value pairs** — like a real dictionary where a word (key) has a meaning (value).
 
 ```python
 student = {
@@ -14,138 +20,114 @@ student = {
     "course": "Python",
     "email": "rahul@gmail.com"
 }
-print(student)
 ```
 
-### Key Characteristics:
-- ✅ **Mutable** — you can add, remove, and change items
-- ✅ **Ordered** — maintains insertion order (Python 3.7+)
-- ✅ **Keys must be unique** — no duplicate keys allowed
-- ✅ **Keys must be immutable** — strings, numbers, tuples can be keys
-- ✅ **Values can be anything** — strings, numbers, lists, even other dictionaries!
+### Key Characteristics
+
+| Feature | Status |
+|---------|:------:|
+| Mutable (changeable) | ![Yes](https://img.shields.io/badge/-Yes-4CAF50?style=flat-square) |
+| Ordered (Python 3.7+) | ![Yes](https://img.shields.io/badge/-Yes-4CAF50?style=flat-square) |
+| Duplicate keys | ![No](https://img.shields.io/badge/-No-F44336?style=flat-square) |
+| Keys must be immutable | ![Yes](https://img.shields.io/badge/-Yes-4CAF50?style=flat-square) |
+| Values can be anything | ![Yes](https://img.shields.io/badge/-Yes-4CAF50?style=flat-square) |
 
 ---
 
-## 🔑 Accessing Dictionary Values
-
-There are two ways to get a value:
+## Accessing Values
 
 ```python
-student = {
-    "id": 101,
-    "name": "Rahul",
-    "age": 22,
-    "course": "Python"
-}
+student = {"id": 101, "name": "Rahul", "age": 22, "course": "Python"}
 
-# Method 1: Using square brackets
-print(student['name'])     # Output: Rahul
-print(student['age'])      # Output: 22
+# Method 1: Square brackets
+print(student['name'])     # Rahul
 
-# Method 2: Using .get() — safer!
-print(student.get('id'))   # Output: 101
+# Method 2: .get() — safer!
+print(student.get('id'))   # 101
 ```
 
-> ⚠️ **Warning:** If the key doesn't exist:
-> - `student['phone']` → **Error!** (KeyError)
+> [!WARNING]
+> If the key doesn't exist:
+> - `student['phone']` → **KeyError!**
 > - `student.get('phone')` → Returns `None` (no error)
-
-> 💡 **Tip:** Always use `.get()` when you're not sure if the key exists!
+>
+> Always use `.get()` when you're not sure if the key exists!
 
 ---
 
-## 📋 Dictionary Methods
+## Dictionary Methods
 
-| Method | What it Returns |
-|--------|----------------|
+| Method | Returns |
+|--------|---------|
 | `.keys()` | All the keys |
 | `.values()` | All the values |
 | `.items()` | All key-value pairs as tuples |
 
-### Examples:
 ```python
-student = {"id": 101, "name": "Rahul", "age": 22, "course": "Python", "email": "rahul@gmail.com"}
+student = {"id": 101, "name": "Rahul", "age": 22}
 
-print(student.keys())
-# Output: dict_keys(['id', 'name', 'age', 'course', 'email'])
-
-print(student.values())
-# Output: dict_values([101, 'Rahul', 22, 'Python', 'rahul@gmail.com'])
-
-print(student.items())
-# Output: dict_items([('id', 101), ('name', 'Rahul'), ('age', 22), ...])
+print(student.keys())    # dict_keys(['id', 'name', 'age'])
+print(student.values())  # dict_values([101, 'Rahul', 22])
+print(student.items())   # dict_items([('id', 101), ...])
 ```
 
 ---
 
-## 🔄 Looping Through a Dictionary
+## Looping Through a Dictionary
 
 ```python
 for key, value in student.items():
     print(key, ':', value)
 
-# Output:
 # id : 101
 # name : Rahul
 # age : 22
-# course : Python
-# email : rahul@gmail.com
 ```
 
 ---
 
-## ➖ Removing Items
+## Removing Items
 
 ```python
-student = {"id": 101, "name": "Rahul", "age": 22, "course": "Python", "email": "rahul@gmail.com"}
+student = {"id": 101, "name": "Rahul", "age": 22, "email": "rahul@gmail.com"}
 
-# pop() — removes by key and returns the value
+# pop() — removes by key, returns the value
 student.pop('email')
-print(student)   # {'id': 101, 'name': 'Rahul', 'age': 22, 'course': 'Python'}
 
 # del — deletes by key
 del student['age']
-print(student)   # {'id': 101, 'name': 'Rahul', 'course': 'Python'}
 ```
 
 ---
 
-## 📦 Nested Dictionaries (Dictionary Inside a Dictionary)
+## Nested Dictionaries
 
 ```python
 students = {
-    101: {
-        "name": "Rahul",
-        "marks": 85
-    },
-    102: {
-        "name": "Priya",
-        "marks": 92
-    }
+    101: {"name": "Rahul", "marks": 85},
+    102: {"name": "Priya", "marks": 92}
 }
 
-# Access nested values
-print(students[101]["name"])    # Output: Rahul
-print(students[102]["marks"])   # Output: 92
+print(students[101]["name"])    # Rahul
+print(students[102]["marks"])   # 92
 ```
 
-> 💡 **Tip:** Nested dictionaries are great for representing structured data like
-> student records, employee details, or JSON data from APIs.
+> [!TIP]
+> Nested dictionaries are great for structured data like student records, JSON data, or API responses.
 
 ---
 
-## 📊 Dictionary vs List — When to Use What?
+## Dictionary vs List
 
-| Feature | List | Dictionary |
-|---------|------|------------|
+| Feature | ![List](https://img.shields.io/badge/List-blue?style=flat-square) | ![Dictionary](https://img.shields.io/badge/Dict-purple?style=flat-square) |
+|---------|:---:|:---:|
 | Access by | Index (0, 1, 2...) | Key ("name", "age"...) |
-| Ordered? | Yes | Yes (Python 3.7+) |
 | Best for | Sequential data | Labeled data |
-| Example | `[90, 85, 78]` | `{"math": 90, "english": 85}` |
+| Example | `[90, 85, 78]` | `{"math": 90, "eng": 85}` |
 
 ---
 
-## 🧪 Quick Practice
+## Practice Exercises
 
 1. Create a dictionary with your name, age, city, and favorite language
 2. Print only the keys, then only the values
@@ -155,4 +137,9 @@ print(students[102]["marks"])   # Output: 92
 
 ---
 
-*← [06 — Tuples](./06_Tuples.md) | Next: [08 — Sets →](./08_Sets.md)*
+<div align="center">
+
+[![Previous](https://img.shields.io/badge/←_Previous-06_Tuples-2196F3?style=for-the-badge)](./06_Tuples.md)
+[![Next](https://img.shields.io/badge/Next_→-08_Sets-2196F3?style=for-the-badge)](./08_Sets.md)
+
+</div>

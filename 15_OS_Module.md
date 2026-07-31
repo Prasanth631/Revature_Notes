@@ -1,11 +1,16 @@
-# 📘 Topic 15: OS Module in Python
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Topic 15](https://img.shields.io/badge/Topic_15-OS_Module-C62828?style=for-the-badge)
+![Intermediate](https://img.shields.io/badge/Level-Intermediate-FF9800?style=for-the-badge)
+
+</div>
 
 ---
 
-## 🧠 What is the OS Module?
+## What is the OS Module?
 
-The `os` module lets you **interact with your operating system** — like creating folders,
-listing files, deleting files, and navigating directories.
+The `os` module lets you **interact with your operating system** — create folders, list files, delete files, and navigate directories.
 
 ```python
 import os
@@ -13,75 +18,51 @@ import os
 
 ---
 
-## 📂 1. Working with Directories (Folders)
+## 1. Working with Directories
 
-### Get Current Working Directory:
 ```python
 import os
-print(os.getcwd())   # Output: C:\data (or wherever you are)
-```
 
-### Change Directory:
-```python
-os.chdir("C:\\data")
-print(os.getcwd())   # Output: C:\data
-```
-
-### List Files in a Directory:
-```python
-files = os.listdir()
-print(files)   # Output: ['backup.txt', 'student.txt']
+print(os.getcwd())       # Get current directory
+os.chdir("C:\\data")     # Change directory
+print(os.listdir())      # List files/folders
 ```
 
 ---
 
-## 📁 2. Creating Directories
+## 2. Creating Directories
 
-### Create a Single Folder:
 ```python
+# Single folder
 os.mkdir("PythonNotes")
-print("Folder Created")
-```
 
-### Create Nested Folders (multiple levels):
-```python
+# Nested folders (multiple levels)
 os.makedirs("Python/Class1/Programs")
-# Creates: Python → Class1 → Programs (all at once!)
 ```
 
-> 💡 **Tip:** Use `makedirs()` when you need to create **multiple levels** of folders.
+> [!TIP]
+> Use `makedirs()` when you need to create **multiple levels** of folders at once.
 
 ---
 
-## 🗑️ 3. Removing Directories
+## 3. Removing Directories
 
-### Remove a Single Empty Folder:
 ```python
-os.rmdir("PythonNotes")
+os.rmdir("PythonNotes")                   # Single empty folder
+os.removedirs("Python/Class1/Programs")   # Nested empty folders
 ```
 
-### Remove Nested Empty Folders:
-```python
-os.removedirs("Python/Class1/Programs")
-# Removes Programs, then Class1, then Python (if empty)
-```
-
-> ⚠️ **Warning:** These only work on **empty** folders!
+> [!WARNING]
+> These only work on **empty** folders!
 
 ---
 
-## 📝 4. Renaming Files
+## 4. Renaming & Deleting Files
 
 ```python
 os.rename("student.txt", "students.txt")
-```
 
----
-
-## 🗑️ 5. Deleting Files
-
-```python
-# Always check if file exists before deleting!
+# Always check before deleting
 if os.path.exists("backup.txt"):
     os.remove("backup.txt")
     print("File deleted")
@@ -91,96 +72,76 @@ else:
 
 ---
 
-## ✅ 6. Checking File/Folder Existence
+## 5. Checking Existence
 
-| Function | What it Checks |
-|----------|---------------|
-| `os.path.exists("name")` | Does the file OR folder exist? |
+| Function | Checks |
+|----------|--------|
+| `os.path.exists("name")` | File OR folder exists? |
 | `os.path.isfile("name")` | Is it a file? |
-| `os.path.isdir("name")` | Is it a directory (folder)? |
+| `os.path.isdir("name")` | Is it a directory? |
 
 ```python
 print(os.path.exists("students.txt"))   # True
 print(os.path.isfile("students.txt"))   # True
-print(os.path.isdir("students.txt"))    # False (it's a file, not a folder)
+print(os.path.isdir("students.txt"))    # False
 ```
 
 ---
 
-## 🎯 Real-World Example: Smart File/Folder Reader
+## 6. Environment Variables
 
 ```python
-import os
-
-name = input("Enter file or folder name: ")
-
-if os.path.isfile(name):
-    with open(name, 'r') as file:
-        print(file.read())
-elif os.path.isdir(name):
-    os.chdir(name)
-    print(os.listdir())
-else:
-    print("File or folder not found")
+print(os.environ.get("USERNAME"))   # Your username
+print(os.environ.get("PATH"))       # System PATH
 ```
 
 ---
 
-## 🌍 7. Environment Variables
+## Cheat Sheet
 
-```python
-import os
-
-# Get your username
-print(os.environ.get("USERNAME"))   # Output: Prasanth Golla
-
-# Get the PATH variable
-print(os.environ.get("PATH"))
+```
+┌──────────────────────────────────────────────┐
+│          OS MODULE CHEAT SHEET               │
+├──────────────────────────────────────────────┤
+│ NAVIGATE:                                    │
+│   os.getcwd()          → Current directory   │
+│   os.chdir("path")     → Change directory    │
+│   os.listdir()         → List contents       │
+│                                              │
+│ CREATE:                                      │
+│   os.mkdir("name")     → Create folder       │
+│   os.makedirs("a/b/c") → Nested folders      │
+│                                              │
+│ DELETE:                                      │
+│   os.remove("file")    → Delete file         │
+│   os.rmdir("folder")   → Delete folder       │
+│                                              │
+│ CHECK:                                       │
+│   os.path.exists()     → Exists?             │
+│   os.path.isfile()     → Is file?            │
+│   os.path.isdir()      → Is directory?       │
+│                                              │
+│ OTHER:                                       │
+│   os.rename(old, new)  → Rename              │
+│   os.environ.get(key)  → Env variable        │
+└──────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📋 OS Module Cheat Sheet
-
-```
-┌─────────────────────────────────────────────────┐
-│            OS MODULE CHEAT SHEET                │
-├─────────────────────────────────────────────────┤
-│  NAVIGATION:                                    │
-│    os.getcwd()          → Get current directory │
-│    os.chdir("path")     → Change directory      │
-│    os.listdir()         → List files/folders    │
-│                                                 │
-│  CREATE:                                        │
-│    os.mkdir("name")     → Create folder         │
-│    os.makedirs("a/b/c") → Create nested folders │
-│                                                 │
-│  DELETE:                                        │
-│    os.remove("file")    → Delete a file         │
-│    os.rmdir("folder")   → Delete empty folder   │
-│    os.removedirs("a/b") → Delete nested folders │
-│                                                 │
-│  CHECK:                                         │
-│    os.path.exists()     → Does it exist?        │
-│    os.path.isfile()     → Is it a file?         │
-│    os.path.isdir()      → Is it a folder?       │
-│                                                 │
-│  OTHER:                                         │
-│    os.rename(old, new)  → Rename file/folder    │
-│    os.environ.get(key)  → Get environment var   │
-└─────────────────────────────────────────────────┘
-```
-
----
-
-## 🧪 Quick Practice
+## Practice Exercises
 
 1. Print your current working directory
-2. Create a folder called "MyProject" and then create a subfolder "src" inside it
+2. Create a folder "MyProject" with subfolder "src"
 3. List all files in your current directory
-4. Check if a file called "data.txt" exists
-5. Get your system's USERNAME from environment variables
+4. Check if "data.txt" exists
+5. Get your system's USERNAME
 
 ---
 
-*← [14 — File Handling](./14_File_Handling.md) | Next: [16 — Map, Filter & Reduce →](./16_Map_Filter_Reduce.md)*
+<div align="center">
+
+[![Previous](https://img.shields.io/badge/←_Previous-14_File_Handling-2196F3?style=for-the-badge)](./14_File_Handling.md)
+[![Next](https://img.shields.io/badge/Next_→-16_Map_Filter-2196F3?style=for-the-badge)](./16_Map_Filter_Reduce.md)
+
+</div>

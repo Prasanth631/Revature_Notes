@@ -1,23 +1,28 @@
-# 📘 Topic 02: Data Types in Python
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Topic 02](https://img.shields.io/badge/Topic_02-Data_Types-FF6F00?style=for-the-badge)
+![Beginner](https://img.shields.io/badge/Level-Beginner-4CAF50?style=for-the-badge)
+
+</div>
 
 ---
 
-## 🧠 What is a Data Type?
+## What is a Data Type?
 
-A **data type** tells Python what **kind of value** a variable holds.
-Think of it as the **label on the box** — it tells you what's inside.
+A **data type** tells Python what **kind of value** a variable holds — like the label on a box that tells you what's inside.
 
 ---
 
-## 📊 Python's Main Data Types
+## Python's Main Data Types
 
 | Data Type | Python Name | Example | Description |
-|-----------|-------------|---------|-------------|
+|-----------|:-----------:|---------|-------------|
 | Integer | `int` | `10`, `-5`, `0` | Whole numbers (no decimals) |
 | Float | `float` | `10.5`, `-3.14` | Numbers with decimals |
 | String | `str` | `"Hello"`, `'Python'` | Text (characters) |
-| Boolean | `bool` | `True`, `False` | Only two values: True or False |
-| Complex | `complex` | `2+3j` | Numbers with real + imaginary parts |
+| Boolean | `bool` | `True`, `False` | Only two values |
+| Complex | `complex` | `2+3j` | Real + imaginary parts |
 | List | `list` | `[1, 2, 3]` | Ordered, changeable collection |
 | Tuple | `tuple` | `(1, 2, 3)` | Ordered, unchangeable collection |
 | Dictionary | `dict` | `{"name": "Ram"}` | Key-value pairs |
@@ -25,23 +30,26 @@ Think of it as the **label on the box** — it tells you what's inside.
 
 ---
 
-## 🔢 Numbers
+## Numbers
 
-### Integer (`int`) — Whole Numbers
+### ![int](https://img.shields.io/badge/int-Integer-blue?style=flat-square) Whole Numbers
+
 ```python
 age = 25
 count = -10
 print(type(age))    # Output: <class 'int'>
 ```
 
-### Float (`float`) — Decimal Numbers
+### ![float](https://img.shields.io/badge/float-Decimal-blue?style=flat-square) Decimal Numbers
+
 ```python
 salary = 50000.50
 pi = 3.14
 print(type(salary)) # Output: <class 'float'>
 ```
 
-### Complex (`complex`) — Real + Imaginary
+### ![complex](https://img.shields.io/badge/complex-Complex-blue?style=flat-square) Real + Imaginary
+
 ```python
 x = 2 + 3j
 
@@ -50,12 +58,12 @@ print(x.imag)       # Output: 3.0  (the imaginary part)
 print(type(x))      # Output: <class 'complex'>
 ```
 
-> 💡 **Tip:** You probably won't use complex numbers much as a beginner.
-> They're used in advanced math and science applications.
+> [!NOTE]
+> Complex numbers are used in advanced math and science applications. You won't use them often as a beginner.
 
 ---
 
-## 📝 Strings (`str`) — Text
+## Strings ![str](https://img.shields.io/badge/str-String-blue?style=flat-square)
 
 Strings are **text values** enclosed in quotes:
 
@@ -66,22 +74,24 @@ print(type(name))   # Output: <class 'str'>
 
 You can use **single quotes** `'hello'` or **double quotes** `"hello"` — both work!
 
-### Accessing Characters:
+### Accessing Characters
+
 ```python
 st = "Python"
 
 print(st[0])     # Output: P     (first character)
 print(st[-1])    # Output: n     (last character)
-print(st[0:6])   # Output: Python (slicing — from index 0 to 5)
-print(st[2:])    # Output: thon  (from index 2 to the end)
-print(st[::-1])  # Output: nohtyP (reversed string!)
+print(st[0:6])   # Output: Python (slicing)
+print(st[2:])    # Output: thon  (from index 2 to end)
+print(st[::-1])  # Output: nohtyP (reversed!)
 ```
 
-> 📝 **Key Point:** Strings are **immutable** — you cannot change individual characters.
+> [!IMPORTANT]
+> Strings are **immutable** — you cannot change individual characters after creation.
 
 ---
 
-## ✅ Boolean (`bool`) — True or False
+## Boolean ![bool](https://img.shields.io/badge/bool-Boolean-blue?style=flat-square)
 
 Booleans only have **two possible values**: `True` or `False`
 
@@ -93,13 +103,12 @@ result = 10 > 5
 print(result)            # Output: True
 ```
 
-> 💡 **Tip:** Booleans are used in conditions (if statements) to make decisions.
+> [!TIP]
+> Booleans are used in conditions (`if` statements) to make decisions.
 
 ---
 
-## 🔍 Checking the Type of a Variable
-
-Use `type()` to find out what data type a variable is:
+## Checking the Type of a Variable
 
 ```python
 x = 10
@@ -114,7 +123,7 @@ print(type(x))    # Output: <class 'bool'>
 
 ---
 
-## 🔄 Type Conversion (Casting)
+## Type Conversion (Casting)
 
 You can **convert** one data type to another:
 
@@ -132,11 +141,12 @@ decimal = float(10)   # 10 → 10.0
 whole = int(10.9)     # 10.9 → 10
 ```
 
-> ⚠️ **Warning:** `int("hello")` will cause an **error** because "hello" is not a number!
+> [!WARNING]
+> `int("hello")` will cause an **error** because `"hello"` is not a number!
 
 ---
 
-## 📊 Data Types at a Glance
+## Quick Reference
 
 ```
              Python Data Types
@@ -159,7 +169,7 @@ whole = int(10.9)     # 10.9 → 10
 
 ---
 
-## 🧪 Quick Practice
+## Practice Exercises
 
 1. Create one variable of each type: `int`, `float`, `str`, `bool`
 2. Use `type()` to check each one
@@ -168,4 +178,9 @@ whole = int(10.9)     # 10.9 → 10
 
 ---
 
-*← [01 — Python Basics](./01_Python_Basics_and_Variables.md) | Next: [03 — Operators →](./03_Operators.md)*
+<div align="center">
+
+[![Previous](https://img.shields.io/badge/←_Previous-01_Basics-2196F3?style=for-the-badge)](./01_Python_Basics_and_Variables.md)
+[![Next](https://img.shields.io/badge/Next_→-03_Operators-2196F3?style=for-the-badge)](./03_Operators.md)
+
+</div>

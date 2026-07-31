@@ -1,8 +1,14 @@
-# 📘 Topic 04: Strings in Python
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Topic 04](https://img.shields.io/badge/Topic_04-Strings-FF6F00?style=for-the-badge)
+![Beginner](https://img.shields.io/badge/Level-Beginner-4CAF50?style=for-the-badge)
+
+</div>
 
 ---
 
-## 🧠 What is a String?
+## What is a String?
 
 A **string** is a **sequence of characters** (letters, numbers, symbols) enclosed in quotes.
 
@@ -11,264 +17,208 @@ st = "hello python"
 print(st)           # Output: hello python
 ```
 
-> 📝 **Key Point:** Strings are **immutable** — once created, you cannot change individual characters.
+> [!IMPORTANT]
+> Strings are **immutable** — once created, you cannot change individual characters.
 
 ---
 
-## 🔠 String Case Methods
-
-These methods change the case (uppercase/lowercase) of your string:
+## String Case Methods
 
 | Method | What it Does | Example | Result |
-|--------|-------------|---------|--------|
+|--------|-------------|:-------:|:------:|
 | `.upper()` | ALL UPPERCASE | `"hello".upper()` | `"HELLO"` |
 | `.lower()` | all lowercase | `"HELLO".lower()` | `"hello"` |
 | `.capitalize()` | First letter uppercase | `"hello python".capitalize()` | `"Hello python"` |
-| `.title()` | First Letter Of Each Word | `"hello python".title()` | `"Hello Python"` |
-| `.swapcase()` | Swap cases | `"hello".swapcase()` | `"HELLO"` |
+| `.title()` | First Letter Each Word | `"hello python".title()` | `"Hello Python"` |
+| `.swapcase()` | Swap cases | `"hELLO".swapcase()` | `"Hello"` |
 
-### Examples:
 ```python
 st = "hello python"
 
-print(st.upper())       # Output: HELLO PYTHON
-print(st.lower())       # Output: hello python
-print(st.capitalize())  # Output: Hello python
-print(st.title())       # Output: Hello Python
-print(st.swapcase())    # Output: HELLO PYTHON
+print(st.upper())       # HELLO PYTHON
+print(st.lower())       # hello python
+print(st.capitalize())  # Hello python
+print(st.title())       # Hello Python
+print(st.swapcase())    # HELLO PYTHON
 ```
 
-> 💡 **Tip:** These methods return a **new string** — they don't change the original!
+> [!TIP]
+> These methods return a **new string** — they don't change the original!
 
 ---
 
-## 🔍 Finding & Searching in Strings
+## Finding & Searching
 
-| Method | What it Does | Returns if Not Found |
-|--------|-------------|---------------------|
+| Method | What it Does | If Not Found |
+|--------|-------------|:------------:|
 | `.find("text")` | Find position of text | `-1` |
-| `.index("text")` | Find position of text | **Error!** (ValueError) |
+| `.index("text")` | Find position of text | **Error!** |
 | `.count("char")` | Count occurrences | `0` |
-| `.startswith("text")` | Does it start with...? | `True` / `False` |
-| `.endswith("text")` | Does it end with...? | `True` / `False` |
+| `.startswith("text")` | Does it start with...? | `False` |
+| `.endswith("text")` | Does it end with...? | `False` |
 
-### Examples:
 ```python
 st = "hello python"
 
-# find() — returns position (index), or -1 if not found
-print(st.find("python"))       # Output: 6
-
-# index() — same as find, but gives ERROR if not found
-print(st.index("python"))      # Output: 6
-
-# count() — how many times does 'o' appear?
-print(st.count('o'))           # Output: 2
-
-# startswith() and endswith()
-print(st.startswith("hello"))  # Output: True
-print(st.endswith("python"))   # Output: True
+print(st.find("python"))       # 6
+print(st.index("python"))      # 6
+print(st.count('o'))           # 2
+print(st.startswith("hello"))  # True
+print(st.endswith("python"))   # True
 ```
 
-> ⚠️ **Warning:** Use `find()` when you're not sure if the text exists.
-> Use `index()` only when you're sure it exists (otherwise it crashes!).
+> [!WARNING]
+> Use `find()` when you're not sure if the text exists. Use `index()` only when you're sure — otherwise it crashes!
 
 ---
 
-## ✂️ Stripping Whitespace
+## Stripping Whitespace
 
 | Method | What it Does |
 |--------|-------------|
 | `.strip()` | Remove spaces from both sides |
-| `.lstrip()` | Remove spaces from left side only |
-| `.rstrip()` | Remove spaces from right side only |
+| `.lstrip()` | Remove spaces from left only |
+| `.rstrip()` | Remove spaces from right only |
 
-### Examples:
 ```python
 text = " Hello Python "
 
-print(text.rstrip())   # Output: " Hello Python"  (right spaces removed)
-print(text.lstrip())   # Output: "Hello Python "   (left spaces removed)
-print(text.strip())    # Output: "Hello Python"     (both sides cleaned)
+print(text.rstrip())   # " Hello Python"
+print(text.lstrip())   # "Hello Python "
+print(text.strip())    # "Hello Python"
 ```
 
 ---
 
-## 🔄 Replacing Text
+## Replacing Text
 
 ```python
 st = "hello python"
-
-print(st.replace('python', 'java'))   # Output: hello java
+print(st.replace('python', 'java'))   # hello java
 ```
 
 ---
 
-## ✂️ Splitting & Joining Strings
+## Splitting & Joining
 
-### `split()` — Break a string into a list of words:
+### `split()` — Break a string into a list
+
 ```python
 st = "hello python"
+words = st.split()
+print(words)                # ['hello', 'python']
 
-words = st.split()          # Split by space (default)
-print(words)                # Output: ['hello', 'python']
-print(type(words))          # Output: <class 'list'>
-
-# Split by custom separator
-print("hello!python".split("!"))   # Output: ['hello', 'python']
+print("hello!python".split("!"))   # ['hello', 'python']
 ```
 
-### `join()` — Combine a list into a string:
+### `join()` — Combine a list into a string
+
 ```python
 names = ['ram', 'kumar', 'reddy']
 result = '-'.join(names)
-print(result)              # Output: ram-kumar-reddy
+print(result)              # ram-kumar-reddy
 ```
 
-### Combining split() and join() (Nested Functions):
+### Combining split() and join()
+
 ```python
 st = "hello python"
-print('-'.join(st.split()))   # Output: hello-python
+print('-'.join(st.split()))   # hello-python
 ```
 
-> 💡 **Tip:** In nested functions, the **inner function runs first**, then the outer one.
+> [!NOTE]
+> In nested functions, the **inner function runs first**, then the outer one.
 
 ---
 
-## ✅ String Checking Methods
+## String Checking Methods
 
-| Method | What it Checks | Example | Result |
-|--------|---------------|---------|--------|
+| Method | Checks For | Example | Result |
+|--------|-----------|:-------:|:------:|
 | `.isalpha()` | All alphabets? | `"Python".isalpha()` | `True` |
 | `.isdigit()` | All digits? | `"12345".isdigit()` | `True` |
 | `.isalnum()` | Alphabets or digits? | `"Python123".isalnum()` | `True` |
 | `.isspace()` | Only spaces? | `" ".isspace()` | `True` |
 
-### Examples:
 ```python
-print("Python".isalpha())        # True  (all letters)
-print("Python1234".isalpha())    # False (contains numbers)
-
-print("12345".isdigit())         # True  (all digits)
-print("12A34".isdigit())         # False (contains a letter)
-
-print("Python123".isalnum())     # True  (letters + digits)
-print("Python@123".isalnum())    # False (@ is not allowed)
-
-print(" ".isspace())             # True  (only space)
-print("Python ".isspace())       # False (not only space)
+print("Python".isalpha())        # True
+print("12345".isdigit())         # True
+print("Python123".isalnum())     # True
+print("Python@123".isalnum())    # False (@ not allowed)
 ```
 
 ---
 
-## 📏 String Length & Useful Functions
+## String Length & Useful Functions
 
 ```python
 st = "Python"
 
-print(len(st))            # Output: 6 (number of characters)
-print(min(st))            # Output: P (smallest character by ASCII)
-print(max(st))            # Output: y (largest character by ASCII)
-print(sorted('python'))   # Output: ['h', 'n', 'o', 'p', 't', 'y'] (sorted list)
+print(len(st))            # 6
+print(min(st))            # P (smallest by ASCII)
+print(max(st))            # y (largest by ASCII)
+print(sorted('python'))   # ['h', 'n', 'o', 'p', 't', 'y']
 ```
 
 ---
 
-## 🔧 Formatting with `center()`
+## Real-World Examples
 
-```python
-st = "hello python"
-print(st.center(40, '*'))
-# Output: **************hello python**************
-```
-
----
-
-## 🎯 Real-World Examples
-
-### 1. Extract Username from Email:
+### Extract Username from Email
 ```python
 email = "student@gmail.com"
 username = email.split("@")[0]
-print(username)              # Output: student
+print(username)              # student
 ```
 
-### 2. Validate Gmail Address:
-```python
-email = "student@gmail.com"
-if email.endswith("@gmail.com"):
-    print("Valid Gmail Address")
-else:
-    print("Invalid Email")
-# Output: Valid Gmail Address
-```
-
-### 3. Clean Up a Username:
-```python
-username = "     SAI KUMAR       "
-print(username.strip().lower())   # Output: sai kumar
-```
-
-### 4. Check Password Strength:
-```python
-password = input("Enter Password: ")
-if len(password) >= 8:
-    print("Strong Password")
-else:
-    print("Weak Password")
-```
-
-### 5. Count Words in a Sentence:
-```python
-sentence = "Python is easy to learn"
-words = sentence.split()
-print(len(words))             # Output: 5
-```
-
-### 6. Check Palindrome:
+### Check Palindrome
 ```python
 pal = "mom"
 if pal == pal[::-1]:
-    print("Palindrome")       # Output: Palindrome
-else:
-    print("Not a Palindrome")
+    print("Palindrome")       # Palindrome
 ```
 
-### 7. Remove Extra Spaces:
+### Count Words in a Sentence
+```python
+sentence = "Python is easy to learn"
+print(len(sentence.split()))  # 5
+```
+
+### Remove Extra Spaces
 ```python
 text = "Python    is    Easy"
-print(" ".join(text.split()))  # Output: Python is Easy
+print(" ".join(text.split()))  # Python is Easy
 ```
 
 ---
 
-## 📋 String Methods Cheat Sheet
+## Cheat Sheet
 
 ```
-┌────────────────────────────────────────────────┐
-│           STRING METHODS CHEAT SHEET           │
-├────────────────────────────────────────────────┤
-│  CASE:     upper() lower() capitalize()        │
-│            title() swapcase()                  │
-│                                                │
-│  SEARCH:   find() index() count()              │
-│            startswith() endswith()              │
-│                                                │
-│  MODIFY:   replace() strip() lstrip() rstrip() │
-│            center()                            │
-│                                                │
-│  SPLIT:    split() join()                      │
-│                                                │
-│  CHECK:    isalpha() isdigit() isalnum()       │
-│            isspace()                           │
-│                                                │
-│  OTHER:    len() min() max() sorted()          │
-└────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────┐
+│        STRING METHODS CHEAT SHEET           │
+├─────────────────────────────────────────────┤
+│ CASE:   upper() lower() capitalize()        │
+│         title() swapcase()                  │
+│                                             │
+│ SEARCH: find() index() count()              │
+│         startswith() endswith()              │
+│                                             │
+│ MODIFY: replace() strip() lstrip() rstrip() │
+│         center()                            │
+│                                             │
+│ SPLIT:  split() join()                      │
+│                                             │
+│ CHECK:  isalpha() isdigit() isalnum()       │
+│         isspace()                           │
+│                                             │
+│ OTHER:  len() min() max() sorted()          │
+└─────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🧪 Quick Practice
+## Practice Exercises
 
 1. Reverse the string `"Python"` using slicing
 2. Count how many vowels are in `"Hello World"`
@@ -278,4 +228,9 @@ print(" ".join(text.split()))  # Output: Python is Easy
 
 ---
 
-*← [03 — Operators](./03_Operators.md) | Next: [05 — Lists →](./05_Lists.md)*
+<div align="center">
+
+[![Previous](https://img.shields.io/badge/←_Previous-03_Operators-2196F3?style=for-the-badge)](./03_Operators.md)
+[![Next](https://img.shields.io/badge/Next_→-05_Lists-2196F3?style=for-the-badge)](./05_Lists.md)
+
+</div>

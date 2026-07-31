@@ -1,53 +1,58 @@
-# 📘 Topic 08: Sets in Python
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Topic 08](https://img.shields.io/badge/Topic_08-Sets-7B1FA2?style=for-the-badge)
+![Beginner-Intermediate](https://img.shields.io/badge/Level-Beginner--Intermediate-2196F3?style=for-the-badge)
+
+</div>
 
 ---
 
-## 🧠 What is a Set?
+## What is a Set?
 
-A **set** is an **unordered, mutable collection of unique elements**.
-Think of it as a **bag of unique items** — no duplicates allowed!
+A **set** is an **unordered, mutable collection of unique elements** — a bag where no duplicates are allowed.
 
 ```python
 fruits = {'Apple', 'Banana', 'Orange'}
-print(fruits)   # Output: {'Apple', 'Orange', 'Banana'} (order may vary!)
+print(fruits)   # Order may vary!
 ```
 
-### Key Characteristics:
-- ✅ **Unordered** — items don't have a fixed position (no indexing!)
-- ✅ **Mutable** — you can add or remove elements
-- ✅ **No duplicates** — automatically removes repeated values
-- ❌ **No indexing** — you can't do `my_set[0]`
+### Key Characteristics
+
+| Feature | Status |
+|---------|:------:|
+| Ordered | ![No](https://img.shields.io/badge/-No-F44336?style=flat-square) |
+| Mutable | ![Yes](https://img.shields.io/badge/-Yes-4CAF50?style=flat-square) |
+| Duplicates | ![No](https://img.shields.io/badge/-No-F44336?style=flat-square) |
+| Indexing | ![No](https://img.shields.io/badge/-No-F44336?style=flat-square) |
 
 ---
 
-## 📝 Creating Sets
+## Creating Sets
 
 ```python
-# Creating a set
 fruits = {'Apple', 'Banana', 'Orange'}
 
 # Duplicates are automatically removed!
 numbers = {10, 20, 20, 30, 30, 40}
-print(numbers)   # Output: {40, 10, 20, 30} (only unique values!)
+print(numbers)   # {40, 10, 20, 30} (only unique values)
 ```
 
 ---
 
-## 🔥 Remove Duplicates from a List Using Sets!
+## Remove Duplicates from a List
 
-This is one of the most **common uses** of sets:
+One of the most **common uses** of sets:
 
 ```python
 numbers = [10, 20, 20, 30, 30, 40]
 unique = list(set(numbers))
-print(unique)   # Output: [40, 10, 20, 30] (order may change)
+print(unique)   # [40, 10, 20, 30] (order may change)
 ```
-
-> 💡 **Tip:** Converting to a set removes duplicates, then convert back to a list!
 
 ---
 
-## ➕ Adding & Removing Items
+## Adding & Removing Items
 
 ```python
 fruits = {'Apple', 'Banana', 'Orange'}
@@ -55,182 +60,96 @@ fruits = {'Apple', 'Banana', 'Orange'}
 # add() — add ONE item
 fruits.add("Mango")
 
-# remove() — removes an item (ERROR if not found!)
+# remove() — ERROR if not found!
 fruits.remove("Banana")
 
-# discard() — removes an item (NO error if not found)
-colors = {"Red", "Blue"}
-colors.discard("Yellow")   # No error even though 'Yellow' isn't there!
-print(colors)              # {'Red', 'Blue'}
+# discard() — NO error if not found
+fruits.discard("Yellow")   # No error
 
-# pop() — removes and returns a RANDOM item
-fruits = {"Apple", "Orange"}
+# pop() — removes a RANDOM item
 removed = fruits.pop()
-print(removed)             # Could be 'Apple' or 'Orange'
 
 # clear() — removes all items
-numbers = {10, 20, 30}
-numbers.clear()
+fruits.clear()
 ```
 
-> ⚠️ **Warning:** `.remove()` gives an error if the item doesn't exist.
-> Use `.discard()` if you're not sure!
+> [!WARNING]
+> `.remove()` gives an error if the item doesn't exist. Use `.discard()` if you're not sure!
 
 ---
 
-## 🔄 Looping Through a Set
+## Set Operations ![Math](https://img.shields.io/badge/Set-Math-purple?style=flat-square)
 
-```python
-numbers = {10, 20, 30}
-for x in numbers:
-    print(x)
-
-# Output (order may vary):
-# 10
-# 20
-# 30
 ```
-
----
-
-## 📏 Set Size & Membership
-
-```python
-numbers = {10, 20, 30, 40}
-
-# Length
-print(len(numbers))          # 4
-
-# Membership check (in / not in)
-fruits = {"Apple", "Orange"}
-print("Apple" in fruits)     # True
-print("Banana" not in fruits) # True
-```
-
----
-
-## 🤝 Set Operations (Very Important!)
-
-Sets support mathematical operations like union, intersection, etc.
-
-### Visual Guide:
-```
-Set A = {1, 2, 3}
-Set B = {3, 4, 5}
+Set A = {1, 2, 3}    Set B = {3, 4, 5}
 
 Union (A ∪ B):        {1, 2, 3, 4, 5}    — All items from both
 Intersection (A ∩ B): {3}                 — Items in BOTH
-Difference (A - B):   {1, 2}              — Items in A but NOT in B
-Difference (B - A):   {4, 5}              — Items in B but NOT in A
-Symmetric Diff:       {1, 2, 4, 5}        — Items in either, but NOT both
+Difference (A - B):   {1, 2}              — Items in A but NOT B
+Symmetric Diff:       {1, 2, 4, 5}        — Items in either, NOT both
 ```
-
-### Code Examples:
-```python
-a = {1, 2, 3}
-b = {3, 4, 5}
-
-# Union — combine all unique items
-print(a.union(b))             # {1, 2, 3, 4, 5}
-print(a | b)                  # Same thing using operator
-
-# Intersection — items in BOTH sets
-print(a.intersection(b))      # {3}
-print(a & b)                  # Same thing using operator
-
-# Difference — items in A but not in B
-print(a - b)                  # {1, 2}
-print(b - a)                  # {4, 5}
-
-# Symmetric Difference — items in either but NOT both
-print(a.symmetric_difference(b))   # {1, 2, 4, 5}
-```
-
----
-
-## 🔄 In-Place Set Operations (Modify the Original Set)
-
-These methods **change the original set**:
 
 ```python
 a = {1, 2, 3}
 b = {3, 4, 5}
 
-# update() — adds all items from b to a (union in-place)
-a.update(b)
-print(a)                      # {1, 2, 3, 4, 5}
-
-# intersection_update() — keeps only common items
-a = {1, 2, 3}
-a.intersection_update(b)
-print(a)                      # {3}
-
-# difference_update() — removes items found in b
-a = {1, 2, 3}
-a.difference_update(b)
-print(a)                      # {1, 2}
+print(a | b)     # {1, 2, 3, 4, 5}  — Union
+print(a & b)     # {3}              — Intersection
+print(a - b)     # {1, 2}           — Difference
+print(a ^ b)     # {1, 2, 4, 5}    — Symmetric Difference
 ```
 
 ---
 
-## ✅ Subset & Superset
+## In-Place Operations
+
+```python
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+a.update(b)                # Union in-place → {1, 2, 3, 4, 5}
+a.intersection_update(b)   # Keep common only → {3}
+a.difference_update(b)     # Remove items in b → {1, 2}
+```
+
+---
+
+## Subset & Superset
 
 ```python
 a = {1, 2, 3}
 b = {1, 2, 3, 4, 5}
 
-print(a.issubset(b))       # True  — All items of A are in B
-print(b.issuperset(a))     # True  — B contains all items of A
+print(a.issubset(b))       # True  — All of A are in B
+print(b.issuperset(a))     # True  — B contains all of A
 ```
 
 ---
 
-## 🎯 Real-World Examples
+## Collections Comparison
 
-### 1. Find Common Skills Between Candidates:
-```python
-candidate1 = {"Python", "SQL", "Pandas"}
-candidate2 = {"Python", "Spark", "SQL"}
-
-common = candidate1 & candidate2
-print(common)   # {'SQL', 'Python'}
-```
-
-### 2. Unique Website Visitors:
-```python
-visitors = {"Sai", "Rahul", "Sai", "Anil", "Rahul", "Kiran"}
-print(visitors)   # Only unique names!
-```
-
-### 3. Merge Two Teams:
-```python
-team1 = {"A", "B"}
-team2 = {"C", "D"}
-team1.update(team2)
-print(team1)      # {'C', 'B', 'D', 'A'}
-```
-
----
-
-## 📊 List vs Tuple vs Set vs Dictionary
-
-| Feature | List | Tuple | Set | Dictionary |
-|---------|------|-------|-----|------------|
+| Feature | ![List](https://img.shields.io/badge/List-blue?style=flat-square) | ![Tuple](https://img.shields.io/badge/Tuple-orange?style=flat-square) | ![Set](https://img.shields.io/badge/Set-purple?style=flat-square) | ![Dict](https://img.shields.io/badge/Dict-green?style=flat-square) |
+|---------|:---:|:---:|:---:|:---:|
 | Syntax | `[1,2,3]` | `(1,2,3)` | `{1,2,3}` | `{"a":1}` |
-| Ordered? | ✅ | ✅ | ❌ | ✅ |
-| Mutable? | ✅ | ❌ | ✅ | ✅ |
-| Duplicates? | ✅ | ✅ | ❌ | Keys: ❌ |
-| Indexed? | ✅ | ✅ | ❌ | By key |
+| Ordered? | Yes | Yes | No | Yes |
+| Mutable? | Yes | No | Yes | Yes |
+| Duplicates? | Yes | Yes | No | Keys: No |
+| Indexed? | Yes | Yes | No | By key |
 
 ---
 
-## 🧪 Quick Practice
+## Practice Exercises
 
 1. Create two sets and find their union, intersection, and difference
 2. Remove duplicates from `[5, 3, 5, 8, 3, 9, 8]` using a set
 3. Check if `{1, 2}` is a subset of `{1, 2, 3, 4}`
-4. Find common subjects between two students
+4. Find common skills between two job candidates
 
 ---
 
-*← [07 — Dictionaries](./07_Dictionaries.md) | Next: [09 — Conditional Statements →](./09_Conditional_Statements.md)*
+<div align="center">
+
+[![Previous](https://img.shields.io/badge/←_Previous-07_Dictionaries-2196F3?style=for-the-badge)](./07_Dictionaries.md)
+[![Next](https://img.shields.io/badge/Next_→-09_Conditionals-2196F3?style=for-the-badge)](./09_Conditional_Statements.md)
+
+</div>

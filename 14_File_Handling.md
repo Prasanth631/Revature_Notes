@@ -1,115 +1,89 @@
-# 📘 Topic 14: File Handling in Python
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Topic 14](https://img.shields.io/badge/Topic_14-File_Handling-C62828?style=for-the-badge)
+![Intermediate](https://img.shields.io/badge/Level-Intermediate-FF9800?style=for-the-badge)
+
+</div>
 
 ---
 
-## 🧠 What is File Handling?
+## What is File Handling?
 
-**File handling** lets you **read from** and **write to** files on your computer.
-This is how programs save data permanently (even after the program stops).
+**File handling** lets you **read from** and **write to** files on your computer — how programs save data permanently.
 
 ---
 
-## 📂 File Modes
+## File Modes
 
 | Mode | What it Does | Creates New File? |
-|------|-------------|-------------------|
-| `"r"` | **Read** — Read content from a file | ❌ No (error if file doesn't exist) |
-| `"w"` | **Write** — Write to a file (OVERWRITES existing content!) | ✅ Yes |
-| `"a"` | **Append** — Add to the end of a file (keeps existing content) | ✅ Yes |
+|:----:|-------------|:-----------------:|
+| `"r"` | **Read** content | ![No](https://img.shields.io/badge/-No-F44336?style=flat-square) (error if missing) |
+| `"w"` | **Write** (OVERWRITES!) | ![Yes](https://img.shields.io/badge/-Yes-4CAF50?style=flat-square) |
+| `"a"` | **Append** to end | ![Yes](https://img.shields.io/badge/-Yes-4CAF50?style=flat-square) |
 
-> ⚠️ **Warning:** `"w"` mode **erases everything** in the file before writing!
-> Use `"a"` mode if you want to **add** without deleting existing content.
+> [!CAUTION]
+> `"w"` mode **erases everything** in the file before writing! Use `"a"` to add without deleting.
 
 ---
 
-## 📖 1. Reading Files
+## 1. Reading Files
 
-### Read one line at a time with `readline()`:
+### Read one line — `readline()`
 ```python
-file = open("C:/Data/student.txt", "r")
-print(file.readline())    # Reads the FIRST line only
+file = open("student.txt", "r")
+print(file.readline())    # Reads first line only
 file.close()
-
-# Output: 101,John,Python
 ```
 
-### Read all lines with a loop:
+### Read all lines with a loop
 ```python
-file = open("C:/Data/student.txt", "r")
+file = open("student.txt", "r")
 line = file.readline()
 
 while line != "":
-    print(line.strip())     # .strip() removes extra newline
+    print(line.strip())     # .strip() removes \n
     line = file.readline()
 
 file.close()
-
-# Output:
-# 101,John,Python
-# 102,Alice,SQL
-# 103,David,Power BI
-# 104,Emma,Tableau
-# 105,Chris,PySpark
 ```
 
-### Read all lines into a list with `readlines()`:
+### Read all lines into a list — `readlines()`
 ```python
-file = open("C:/Data/student.txt", "r")
+file = open("student.txt", "r")
 data = file.readlines()
-print(data)
-file.close()
-
-# Output: ['101,John,Python\n', '102,Alice,SQL\n', ...]
-```
-
-### Read all lines — clean version:
-```python
-file = open("C:/Data/student.txt", "r")
-students = file.readlines()
-
-for student in students:
-    print(student.strip())   # .strip() removes \n
-
+print(data)   # ['101,John,Python\n', '102,Alice,SQL\n', ...]
 file.close()
 ```
 
-### Read entire file at once with `read()`:
+### Read entire file — `read()`
 ```python
-file = open("C:/Data/student.txt", "r")
-print(file.read())    # Reads EVERYTHING as one big string
+file = open("student.txt", "r")
+print(file.read())    # Everything as one string
 file.close()
 ```
 
 ---
 
-## ✏️ 2. Writing to Files
+## 2. Writing Files
 
-### Write (OVERWRITES everything):
 ```python
-file = open("C:/Data/student.txt", "w")
-file.write("101,Rahul,Python")
-file.close()
-```
-
-### Write multiple lines:
-```python
-file = open("C:/Data/student.txt", "w")
+file = open("student.txt", "w")
 file.write("101,Praveen,Python\n")
 file.write("102,Ram,SQL\n")
 file.write("103,Ramesh,Power BI\n")
 file.close()
 ```
 
-> 💡 **Tip:** Add `\n` at the end of each line for a newline!
+> [!TIP]
+> Add `\n` at the end of each line for a newline.
 
 ---
 
-## ➕ 3. Appending to Files
-
-Append adds content **to the end** without erasing:
+## 3. Appending
 
 ```python
-file = open("C:/Data/student.txt", "a")
+file = open("student.txt", "a")
 file.write("104,Suresh,Java\n")
 file.write("105,Kiran,React\n")
 file.close()
@@ -117,70 +91,61 @@ file.close()
 
 ---
 
-## 🔒 4. The `with` Statement (Best Practice!)
+## 4. The `with` Statement ![Best Practice](https://img.shields.io/badge/Best-Practice-4CAF50?style=flat-square)
 
-Using `with` automatically **closes the file** when done — no need for `file.close()`:
+Using `with` **automatically closes** the file — no need for `file.close()`:
 
 ```python
-# Reading with 'with'
-with open("C:/Data/student.txt", "r") as file:
+# Reading
+with open("student.txt", "r") as file:
     data = file.read()
     print(data)
-# File is automatically closed here!
+# File automatically closed!
 
-# Writing with 'with'
-with open("C:/Data/output.txt", "w") as file:
+# Writing
+with open("output.txt", "w") as file:
     file.write("Hello, World!")
-# File is automatically closed here!
+# File automatically closed!
 ```
 
-> 💡 **Tip:** Always use `with` — it's safer and cleaner!
-> You'll never forget to close the file.
+> [!TIP]
+> Always use `with` — it's safer, cleaner, and you'll never forget to close the file.
 
 ---
 
-## 🎯 Real-World Example: File Backup
+## Reading Methods Comparison
 
-```python
-# Read from source file
-with open("C:/Data/student.txt", "r") as source:
-    data = source.read()
-
-# Write to backup file
-with open("C:/Data/backup.txt", "w") as target:
-    target.write(data)
-
-print("Backup created!")
-```
+| Method | Returns | Best For |
+|--------|---------|----------|
+| `read()` | Entire file as string | Small files |
+| `readline()` | One line at a time | Line-by-line processing |
+| `readlines()` | List of all lines | All lines as a list |
 
 ---
 
-## 📊 Reading Methods Comparison
+## Common Mistakes
 
-| Method | What it Returns | Use Case |
-|--------|----------------|----------|
-| `read()` | Entire file as one string | Small files |
-| `readline()` | One line at a time | Processing line by line |
-| `readlines()` | List of all lines | When you need all lines as a list |
-
----
-
-## ⚠️ Common Mistakes
-
-1. **Forgetting to close the file** → Use `with` to avoid this
-2. **Using `"w"` when you meant `"a"`** → Accidentally erasing data
-3. **Not using `.strip()`** → Getting extra `\n` in your output
-4. **File not found error** → Check the file path is correct
+| Mistake | Solution |
+|---------|----------|
+| Forgetting to close the file | Use `with` statement |
+| Using `"w"` when you meant `"a"` | Double-check the mode |
+| Extra `\n` in output | Use `.strip()` |
+| File not found error | Check the file path |
 
 ---
 
-## 🧪 Quick Practice
+## Practice Exercises
 
 1. Create a text file and write 3 student records
 2. Read the file and print each line
-3. Append 2 more records to the file
+3. Append 2 more records
 4. Create a backup of the file using `with`
 
 ---
 
-*← [13 — Built-in Functions](./13_Builtin_Functions_and_Math.md) | Next: [15 — OS Module →](./15_OS_Module.md)*
+<div align="center">
+
+[![Previous](https://img.shields.io/badge/←_Previous-13_Builtins-2196F3?style=for-the-badge)](./13_Builtin_Functions_and_Math.md)
+[![Next](https://img.shields.io/badge/Next_→-15_OS_Module-2196F3?style=for-the-badge)](./15_OS_Module.md)
+
+</div>
