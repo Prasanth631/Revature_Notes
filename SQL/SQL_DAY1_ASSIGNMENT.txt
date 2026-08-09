@@ -1,0 +1,253 @@
+Topic 1: CREATE TABLE
+Exercise 1
+
+Create a table named Students with the following columns:
+
+StudentID
+StudentName
+Age
+City
+Exercise 2
+
+Create a table named Employees with the following columns:
+
+EmployeeID
+EmployeeName
+Department
+Salary
+JoiningDate
+Exercise 3
+
+Create a table named Products with:
+
+ProductID
+ProductName
+Price
+Quantity
+Exercise 4
+
+Create a table named Orders containing:
+
+OrderID
+CustomerName
+OrderDate
+TotalAmount
+Exercise 5
+
+Create a table named Books with:
+
+BookID
+BookTitle
+Author
+Price
+PublishedYear
+Topic 2: DEFAULT Constraint
+Exercise 1
+
+Create an Employees table where the default city is Hyderabad.
+
+Exercise 2
+
+Create a Products table where Quantity defaults to 0.
+
+Exercise 3
+
+Create a Students table where Course defaults to Python.
+
+Exercise 4
+
+Create a Users table where Status defaults to Active.
+
+Exercise 5
+
+Create an Orders table where OrderDate defaults to the current date.
+
+Topic 3: AUTO_INCREMENT
+Exercise 1
+
+Create a Customer table where CustomerID is automatically generated.
+
+Exercise 2
+
+Create an Employee table with an auto-generated EmployeeID.
+
+Exercise 3
+
+Create a Product table where ProductID increases automatically.
+
+Exercise 4
+
+Create an Orders table with auto-generated OrderID.
+
+Exercise 5
+
+Create a Library table where BookID is automatically assigned.
+
+Topic 4: NOT NULL Constraint
+Exercise 1
+
+Create a Student table where StudentName cannot be NULL.
+
+Exercise 2
+
+Create an Employee table where Department and Salary cannot be NULL.
+
+Exercise 3
+
+Create a Product table where ProductName is mandatory.
+
+Exercise 4
+
+Create a Customer table where Email cannot be NULL.
+
+Exercise 5
+
+Create a Course table where CourseName cannot be NULL.
+
+Topic 5: PRIMARY KEY
+Exercise 1
+
+Create a Student table with StudentID as the primary key.
+
+Exercise 2
+
+Create an Employee table with EmployeeID as the primary key.
+
+Exercise 3
+
+Create a Product table with ProductID as the primary key.
+
+Exercise 4
+
+Create an Orders table with OrderID as the primary key.
+
+Exercise 5
+
+Create a Department table with DepartmentID as the primary key.
+
+Topic 6: UNIQUE Constraint
+Exercise 1
+
+Create a Customer table where Email must be unique.
+
+Exercise 2
+
+Create an Employee table where MobileNumber is unique.
+
+Exercise 3
+
+Create a Student table where RollNumber is unique.
+
+Exercise 4
+
+Create a Product table where ProductCode is unique.
+
+Exercise 5
+
+Create a User table where Username is unique.
+
+Topic 7: CHECK Constraint
+Exercise 1
+
+Create a Student table where Age must be greater than or equal to 18.
+
+Exercise 2
+
+Create an Employee table where Salary must be greater than 10000.
+
+Exercise 3
+
+Create a Product table where Price must be greater than 0.
+
+Exercise 4
+
+Create a Customer table where Gender can only be 'Male', 'Female', or 'Other'.
+
+Exercise 5
+
+Create an Exam table where Marks must be between 0 and 100.
+
+Topic 8: FOREIGN KEY
+Exercise 1
+
+Create two tables:
+
+Departments
+
+DepartmentID
+DepartmentName
+
+Employees
+
+EmployeeID
+EmployeeName
+DepartmentID
+
+Create a foreign key relationship.
+
+Exercise 2
+
+Create:
+
+Customers
+
+CustomerID
+CustomerName
+
+Orders
+
+OrderID
+CustomerID
+
+Create a foreign key.
+
+Exercise 3
+
+Create:
+
+Authors
+
+AuthorID
+AuthorName
+
+Books
+
+BookID
+BookTitle
+AuthorID
+
+Create the relationship.
+
+Exercise 4
+
+Create:
+
+Categories
+
+CategoryID
+CategoryName
+
+Products
+
+ProductID
+ProductName
+CategoryID
+
+Create a foreign key.
+
+Exercise 5
+
+Create:
+
+Teachers
+
+TeacherID
+TeacherName
+
+Students
+
+StudentID
+StudentName
+TeacherID
+
+Create the relationship.
