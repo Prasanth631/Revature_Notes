@@ -108,6 +108,7 @@ Click any hyperlink below to jump directly to that specific study guide:
 | # | Topic / Module Name | Study Guide (.md) | Core Concepts Covered | Level |
 |:-:|---------------------|-------------------|-----------------------|:-----:|
 | 01 | **Day 1: Cloud Architecture & Models** | [Day_01_Cloud_Fundamentals.md](./Cloud_Fundamentals/Day_01_Cloud_Fundamentals.md) | NIST Definition, 5 Characteristics, Deployment Models (Public/Private/Hybrid), Service Models (IaaS/PaaS/SaaS), AWS/Azure/GCP Comparison, Pricing Models (On-Demand, Reserved, Spot, CapEx vs OpEx) | ![Beginner](https://img.shields.io/badge/-Beginner-4CAF50?style=flat-square) |
+| 02 | **Day 2: Components, 3-Tier Architecture & Data Types** | [Day_02_Cloud_Fundamentals.md](./Cloud_Fundamentals/Day_02_Cloud_Fundamentals.md) | 6 Core Cloud Components, 3-Tier Web Architecture, Benefits vs Challenges, Shared Responsibility, Structured/Semi/Unstructured Data, Cloud File Types | ![Beginner](https://img.shields.io/badge/-Beginner-4CAF50?style=flat-square) |
 
 👉 **[Jump to Dedicated Cloud Fundamentals Index Page](./Cloud_Fundamentals/README.md)**
 

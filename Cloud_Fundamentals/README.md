@@ -17,6 +17,7 @@
 | Day | Title & Focus | File Link | Core Concepts Covered |
 |:---:|---------------|-----------|-----------------------|
 | 01 | **Cloud Fundamentals & Architecture** | [Day_01_Cloud_Fundamentals.md](./Day_01_Cloud_Fundamentals.md) | NIST Definition, 5 Characteristics, Deployment Models (Public/Private/Hybrid/Multi-Cloud), Service Models (IaaS, PaaS, SaaS), Hyperscaler Overview (AWS/Azure/GCP), Cloud Economics & Pricing Models (CapEx vs OpEx, Reserved, Spot, On-Demand) |
+| 02 | **Components, Architecture & Data Types** | [Day_02_Cloud_Fundamentals.md](./Day_02_Cloud_Fundamentals.md) | 6 Core Cloud Components, 3-Tier Architecture, Benefits & Challenges, Shared Responsibility Model, Data Types (Structured/Semi/Unstructured), Cloud File Types (CSV, JSON, XML, Parquet, Avro, Media) |
 
 ---
 
