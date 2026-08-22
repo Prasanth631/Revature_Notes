@@ -26,24 +26,14 @@ Revature_Notes/
 │   ├── 01_Python_Basics_and_Variables.md──> Python Basics & Syntax
 │   └── ... (24 Topic-Wise Study Guides)
 │
-└── 🐬 SQL/                              ──> MySQL Database Notes & Solved Assignments Module
-    ├── README.md                        ──> SQL Master Index & Guide
-    ├── Topic_1.sql / .md                ──> Basic DDL & Data Types
-    ├── Topic_2_3.sql / .md              ──> DEFAULT & AUTO_INCREMENT
-    ├── Topic_4.sql / .md                ──> NOT NULL & ALTER TABLE
-    ├── Topic_5.sql / .md                ──> PRIMARY KEY Constraint
-    ├── Topic_6.sql / .md                ──> UNIQUE Constraint & RENAME
-    ├── Topic_7.sql / .md                ──> CHECK Constraint Validation
-    ├── Topic_8.sql / .md                ──> FOREIGN KEY & Referential Integrity
-    ├── Day_1_DDL.sql / .md              ──> Server Inspection & CTAS
-    ├── Day_1_DDL_.sql / .md             ──> Advanced ALTER TABLE & UPDATE
-    ├── Day_3.sql / .md                  ──> Date Math, Aggregates & Window Functions
-    ├── Day_3_Joins.sql / .md            ──> Relational Joins, Subqueries & Views
-    ├── Day_4.sql / .md                  ──> CTEs, Transactions, Procedures & Triggers
-    ├── SQL_Commands.sql / .md           ──> Master SQL Commands Reference
-    ├── SQL_DAY1_ASSIGNMENT.sql / .md    ──> Day 1 Solved Assignment (35 Exercises)
-    ├── SQL_DAY2_ASSIGNMENT.sql / .md    ──> Day 2 Solved Assignment (83 Exercises)
-    └── SQL_DAY3_ASSIGNMENT.sql / .md    ──> Day 3 Solved SalesDB Assignment (35 Questions)
+├── 🐬 SQL/                              ──> MySQL Database Notes & Solved Assignments Module
+│   ├── README.md                        ──> SQL Master Index & Guide
+│   ├── Topic_1.sql / .md                ──> Basic DDL & Data Types
+│   └── ... (33 Files & Assignments)
+│
+└── ☁️ Cloud_Fundamentals/               ──> Cloud Computing & Hyperscalers Module
+    ├── README.md                        ──> Cloud Master Index & Guide
+    └── Day_01_Cloud_Fundamentals.md     ──> Day 1: Cloud Architecture, Models & Pricing
 ```
 
 ---
@@ -108,6 +98,18 @@ Click any hyperlink below to jump directly to the study guide (`.md`) or the exe
 | 16 | **Assignment Day 3 (SalesDB)** | [SQL_DAY3_ASSIGNMENT.md](./SQL/SQL_DAY3_ASSIGNMENT.md) | [SQL_DAY3_ASSIGNMENT.sql](./SQL/SQL_DAY3_ASSIGNMENT.sql) | Solved SalesDB assignment set: Subqueries, JOIN Aggregations, Views & CTEs (35 Questions) | ![Advanced](https://img.shields.io/badge/-Advanced-F44336?style=flat-square) |
 
 👉 **[Jump to Dedicated SQL Index Page](./SQL/README.md)**
+
+---
+
+## ☁️ Module 3: Cloud Fundamentals & Hyperscalers
+
+Click any hyperlink below to jump directly to that specific study guide:
+
+| # | Topic / Module Name | Study Guide (.md) | Core Concepts Covered | Level |
+|:-:|---------------------|-------------------|-----------------------|:-----:|
+| 01 | **Day 1: Cloud Architecture & Models** | [Day_01_Cloud_Fundamentals.md](./Cloud_Fundamentals/Day_01_Cloud_Fundamentals.md) | NIST Definition, 5 Characteristics, Deployment Models (Public/Private/Hybrid), Service Models (IaaS/PaaS/SaaS), AWS/Azure/GCP Comparison, Pricing Models (On-Demand, Reserved, Spot, CapEx vs OpEx) | ![Beginner](https://img.shields.io/badge/-Beginner-4CAF50?style=flat-square) |
+
+👉 **[Jump to Dedicated Cloud Fundamentals Index Page](./Cloud_Fundamentals/README.md)**
 
 ---
 
