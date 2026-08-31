@@ -5,9 +5,9 @@
 ![Revature Notes](https://img.shields.io/badge/Revature-Notes_%26_Assignments-C62828?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Complete-success?style=for-the-badge)
 
-# Master Learning Repository — Python Programming & MySQL Database Engineering
+# Master Learning Repository — Python, SQL, Cloud, and Scala
 
-**Exhaustive study guides, cheat sheets, exercise walkthroughs, executable scripts, and interview preparation guides for Python 3, NumPy, Pandas, and MySQL Database Engineering.**
+**Study guides, executable examples, assignments, and interview preparation for Python, SQL, Cloud Fundamentals, and Scala 3.**
 
 ---
 
@@ -15,7 +15,7 @@
 
 ## 📌 Repository Organization
 
-This repository is structured into two dedicated, clean learning directories:
+This repository is organized into dedicated learning modules:
 
 ```
 Revature_Notes/
@@ -37,7 +37,7 @@ Revature_Notes/
 │
 └── 🔷 scala/                            ──> Scala 3 Interview Preparation Module
     ├── README.md                        ──> Scala Study Index
-    └── 01_... through 06_....md         ──> Topic-wise notes and review
+    └── 01_... through 18_....md         ──> Beginner-first notes with runnable programs
 ```
 
 ---
@@ -122,12 +122,7 @@ Click any hyperlink below to jump directly to that specific study guide:
 
 | # | Study Guide | Core Concepts Covered |
 |:-:|---|---|
-| 01 | [Introduction and Setup](./scala/01_Introduction_and_Setup.md) | Scala/JVM overview, Scala CLI, sbt, IntelliJ, runnable entry points |
-| 02 | [Core Language](./scala/02_Core_Language.md) | `val`/`var`, data types, expressions, strings, functions |
-| 03 | [Control Flow and Collections](./scala/03_Control_Flow_and_Collections.md) | conditions, pattern matching, loops, tuples, `List`, `Map`, `Set` |
-| 04 | [Classes and Objects](./scala/04_Classes_and_Objects.md) | classes, objects, case classes, inheritance, traits, encapsulation |
-| 05 | [Functional Programming](./scala/05_Functional_Programming.md) | pure functions, lambdas, higher-order functions, collection transformations |
-| 06 | [Exceptions and Review](./scala/06_Exceptions_and_Review.md) | `try`/`catch`, `Option`, `Either`, interview recap, practice prompts |
+| 01–18 | [Beginner-first Scala Study Path](./scala/README.md) | Every requested Scala topic, real-life examples, standalone runnable Scala 3 programs, and interview answers |
 
 👉 **[Jump to Dedicated Scala Index Page](./scala/README.md)**
 
