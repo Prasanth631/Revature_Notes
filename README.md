@@ -34,6 +34,10 @@ Revature_Notes/
 └── ☁️ Cloud_Fundamentals/               ──> Cloud Computing & Hyperscalers Module
     ├── README.md                        ──> Cloud Master Index & Guide
     └── Day_01_Cloud_Fundamentals.md     ──> Day 1: Cloud Architecture, Models & Pricing
+│
+└── 🔷 scala/                            ──> Scala 3 Interview Preparation Module
+    ├── README.md                        ──> Scala Study Index
+    └── 01_... through 06_....md         ──> Topic-wise notes and review
 ```
 
 ---
@@ -111,6 +115,21 @@ Click any hyperlink below to jump directly to that specific study guide:
 | 02 | **Day 2: Components, 3-Tier Architecture & Data Types** | [Day_02_Cloud_Fundamentals.md](./Cloud_Fundamentals/Day_02_Cloud_Fundamentals.md) | 6 Core Cloud Components, 3-Tier Web Architecture, Benefits vs Challenges, Shared Responsibility, Structured/Semi/Unstructured Data, Cloud File Types | ![Beginner](https://img.shields.io/badge/-Beginner-4CAF50?style=flat-square) |
 
 👉 **[Jump to Dedicated Cloud Fundamentals Index Page](./Cloud_Fundamentals/README.md)**
+
+---
+
+## 🔷 Module 4: Scala 3 Interview Preparation
+
+| # | Study Guide | Core Concepts Covered |
+|:-:|---|---|
+| 01 | [Introduction and Setup](./scala/01_Introduction_and_Setup.md) | Scala/JVM overview, Scala CLI, sbt, IntelliJ, runnable entry points |
+| 02 | [Core Language](./scala/02_Core_Language.md) | `val`/`var`, data types, expressions, strings, functions |
+| 03 | [Control Flow and Collections](./scala/03_Control_Flow_and_Collections.md) | conditions, pattern matching, loops, tuples, `List`, `Map`, `Set` |
+| 04 | [Classes and Objects](./scala/04_Classes_and_Objects.md) | classes, objects, case classes, inheritance, traits, encapsulation |
+| 05 | [Functional Programming](./scala/05_Functional_Programming.md) | pure functions, lambdas, higher-order functions, collection transformations |
+| 06 | [Exceptions and Review](./scala/06_Exceptions_and_Review.md) | `try`/`catch`, `Option`, `Either`, interview recap, practice prompts |
+
+👉 **[Jump to Dedicated Scala Index Page](./scala/README.md)**
 
 ---
 
