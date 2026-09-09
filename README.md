@@ -31,13 +31,17 @@ Revature_Notes/
 │   ├── Topic_1.sql / .md                ──> Basic DDL & Data Types
 │   └── ... (33 Files & Assignments)
 │
-└── ☁️ Cloud_Fundamentals/               ──> Cloud Computing & Hyperscalers Module
-    ├── README.md                        ──> Cloud Master Index & Guide
-    └── Day_01_Cloud_Fundamentals.md     ──> Day 1: Cloud Architecture, Models & Pricing
+├── ☁️ Cloud_Fundamentals/               ──> Cloud Computing & Hyperscalers Module
+│   ├── README.md                        ──> Cloud Master Index & Guide
+│   └── Day_01_Cloud_Fundamentals.md     ──> Day 1: Cloud Architecture, Models & Pricing
 │
-└── 🔷 scala/                            ──> Scala 3 Interview Preparation Module
-    ├── README.md                        ──> Scala Study Index
-    └── 01_... through 18_....md         ──> Beginner-first notes with runnable programs
+├── 🔷 scala/                            ──> Scala 3 Interview Preparation Module
+│   ├── README.md                        ──> Scala Study Index
+│   └── 01_... through 18_....md         ──> Beginner-first notes with runnable programs
+│
+└── ❄️ snowflake/                        ──> Snowflake Cloud Data Platform Module
+    ├── README.md                        ──> Snowflake Master Index & Guide
+    └── Day_01_Snowflake_Fundamentals... ──> Day 1: Architecture, Warehouses & Storage
 ```
 
 ---
@@ -128,8 +132,19 @@ Click any hyperlink below to jump directly to that specific study guide:
 
 ---
 
+## ❄️ Module 5: Snowflake Cloud Data Platform
+
+| # | Topic / Module Name | Study Guide (.md) | Core Concepts Covered | Level |
+|:-:|---------------------|-------------------|-----------------------|:-----:|
+| 01 | **Day 1: Snowflake Fundamentals & Architecture** | [Day_01_Snowflake_Fundamentals_and_Architecture.md](./snowflake/Day_01_Snowflake_Fundamentals_and_Architecture.md) | SaaS Model, 3-Tier Multi-Cluster Shared Data Architecture, Virtual Warehouses (Scale-Up vs Scale-Out), Micro-Partitioning, Columnar Storage, Storage-Level Clustering | ![Beginner](https://img.shields.io/badge/-Beginner-4CAF50?style=flat-square) |
+
+👉 **[Jump to Dedicated Snowflake Index Page](./snowflake/README.md)**
+
+---
+
 <div align="center">
 
 **Created by [Prasanth Golla](https://github.com/Prasanth631)**
 
 </div>
+
