@@ -132,11 +132,17 @@ Click any hyperlink below to jump directly to that specific study guide:
 
 ---
 
-## ❄️ Module 5: Snowflake Cloud Data Platform
+## ❄️ Module 5: Snowflake Cloud Data Platform & dbt
 
 | # | Topic / Module Name | Study Guide (.md) | Core Concepts Covered | Level |
 |:-:|---------------------|-------------------|-----------------------|:-----:|
 | 01 | **Day 1: Snowflake Fundamentals & Architecture** | [Day_01_Snowflake_Fundamentals_and_Architecture.md](./snowflake/Day_01_Snowflake_Fundamentals_and_Architecture.md) | SaaS Model, 3-Tier Multi-Cluster Shared Data Architecture, Virtual Warehouses (Scale-Up vs Scale-Out), Micro-Partitioning, Columnar Storage, Storage-Level Clustering | ![Beginner](https://img.shields.io/badge/-Beginner-4CAF50?style=flat-square) |
+| 02 | **Day 2: Data Loading & Performance** | [Day_02_Snowflake_Data_Loading_and_Performance.md](./snowflake/Day_02_Snowflake_Data_Loading_and_Performance.md) | Bulk Data Loading (`COPY INTO`), File Format Optimization (Parquet, CSV, JSON), Stages, Error Handling, Transient Tables, Secure Views | ![Intermediate](https://img.shields.io/badge/-Intermediate-FF9800?style=flat-square) |
+| 03 | **Day 3: Storage & Performance Optimization** | [Day_03_Snowflake_Performance_and_Storage_Optimization.md](./snowflake/Day_03_Snowflake_Performance_and_Storage_Optimization.md) | Automatic Compression Algorithms, Partition Pruning Verification, Automatic Statistics Generation | ![Intermediate](https://img.shields.io/badge/-Intermediate-FF9800?style=flat-square) |
+| 04 | **Day 4: Advanced Performance & Optimization** | [Day_04_Advanced_Snowflake_Performance_and_Optimization.md](./snowflake/Day_04_Advanced_Snowflake_Performance_and_Optimization.md) | Multi-Cluster Auto-Scaling, Workload Management, Resource Monitors, Cost Optimization, Execution Plans (`EXPLAIN`), Profiling, 3-Tier Caching | ![Advanced](https://img.shields.io/badge/-Advanced-F44336?style=flat-square) |
+| 05 | **Day 5: Advanced Features & UDFs** | [Day_05_Snowflake_Advanced_Features_and_UDFs.md](./snowflake/Day_05_Snowflake_Advanced_Features_and_UDFs.md) | Semi-Structured JSON/XML Querying (`FLATTEN`), Cross-Region Replication & Failover, Time Travel & Fail-Safe, SQL/JS/Python UDFs, Data Sharing | ![Advanced](https://img.shields.io/badge/-Advanced-F44336?style=flat-square) |
+| 06 | **Day 6: Snowpark & dbt Fundamentals** | [Day_06_Snowpark_and_DBT.md](./snowflake/Day_06_Snowpark_and_DBT.md) | Stored Procedures, Snowpark Python DataFrames, In-Database Processing vs Spark, dbt Project Setup, Materializations, Testing | ![Advanced](https://img.shields.io/badge/-Advanced-F44336?style=flat-square) |
+| 07 | **Day 7: dbt Advanced, Tasks & Security** | [Day_07_DBT_Advanced_and_Snowflake_Integration.md](./snowflake/Day_07_DBT_Advanced_and_Snowflake_Integration.md) | dbt Snapshots for SCD Type 2, Snowflake Tasks & DAGs, Python Connector with Key-Pair Auth, RBAC Governance, Dynamic Data Masking, Row-Level Security | ![Advanced](https://img.shields.io/badge/-Advanced-F44336?style=flat-square) |
 
 👉 **[Jump to Dedicated Snowflake Index Page](./snowflake/README.md)**
 
