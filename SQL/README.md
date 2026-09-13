@@ -6,41 +6,114 @@
 
 # MySQL Database Engineering — Master Index
 
-**Complete study guides, executable SQL scripts, solved assignment sets, and interview preparation guides for MySQL Database Engineering.**
+**Structured topic-wise SQL study guides and executable scripts for MySQL Database Engineering.**
 
 ---
 
 </div>
 
-## 📌 How to Use This Module
+## 📁 Folder Structure
 
-This directory contains **structured SQL topic notes, core practice modules, and solved assignment sets**.  
-Each entry includes two direct clickable links:
-1. **Markdown Study Guide (`.md`)**: Comprehensive explanations, 5-point query breakdowns, comparison tables, and interview tips.
-2. **Executable SQL Script (`.sql`)**: Clean, formatted uppercase SQL queries with inline documentation comments ready to execute in MySQL Workbench / CLI.
+```
+SQL/
+├── 01_DDL_and_Data_Types/          → CREATE, USE, DESC, Data Types
+├── 02_Constraints/                 → DEFAULT, AUTO_INCREMENT, NOT NULL, PRIMARY KEY, UNIQUE, CHECK, FOREIGN KEY
+├── 03_DML_and_Alterations/        → ALTER TABLE, TRUNCATE, UPDATE, DELETE
+├── 04_Joins_Subqueries_Views/     → INNER/LEFT/RIGHT/SELF Joins, Subqueries, UNION, CASE, VIEWs
+├── 05_Functions_Aggregates_Windows/ → Date Functions, GROUP BY, HAVING, Window Functions, WHERE Operators
+├── 06_Transactions_DCL_Advanced/  → CTEs, ACID, Transactions, DCL, Stored Procedures, Functions, Triggers, Indexes
+└── 07_Assignments/                 → Solved Day 1, Day 2, Day 3 Assignments
+```
 
 ---
 
-## 🗺️ Master Table of Contents & Direct File Links
+## 🗺️ Topic-wise Contents
 
-| # | Topic / Script Name | Markdown Study Guide | Executable SQL Script | Core Concepts Covered | Level |
-|:-:|---------------------|----------------------|-----------------------|-----------------------|:-----:|
-| 01 | **Topic 1** | [Topic_1.md](./Topic_1.md) | [Topic_1.sql](./Topic_1.sql) | DDL (`CREATE`, `USE`, `DESC`), Data Types (`INT`, `VARCHAR`, `DECIMAL`, `FLOAT`, `DATE`), Table creation | ![Beginner](https://img.shields.io/badge/-Beginner-4CAF50?style=flat-square) |
-| 02 | **Topic 2 & 3** | [Topic_2_3.md](./Topic_2_3.md) | [Topic_2_3.sql](./Topic_2_3.sql) | `DEFAULT` constraint, Dynamic defaults (`CURRENT_DATE`), `AUTO_INCREMENT` primary keys & sequence rules | ![Beginner](https://img.shields.io/badge/-Beginner-4CAF50?style=flat-square) |
-| 03 | **Topic 4** | [Topic_4.md](./Topic_4.md) | [Topic_4.sql](./Topic_4.sql) | `NOT NULL` constraint, Column data type refactoring using `ALTER TABLE ... MODIFY COLUMN` | ![Beginner](https://img.shields.io/badge/-Beginner-4CAF50?style=flat-square) |
-| 04 | **Topic 5** | [Topic_5.md](./Topic_5.md) | [Topic_5.sql](./Topic_5.sql) | `PRIMARY KEY` entity integrity, Uniqueness + Non-nullability, Clustered B-Tree Indexing | ![Beginner](https://img.shields.io/badge/-Beginner-4CAF50?style=flat-square) |
-| 05 | **Topic 6** | [Topic_6.md](./Topic_6.md) | [Topic_6.sql](./Topic_6.sql) | `UNIQUE` key constraint, Multiple `NULL` handling, `VARCHAR` phone number design, `ALTER TABLE RENAME` | ![Beginner](https://img.shields.io/badge/-Beginner-4CAF50?style=flat-square) |
-| 06 | **Topic 7** | [Topic_7.md](./Topic_7.md) | [Topic_7.sql](./Topic_7.sql) | `CHECK` domain validation, Numeric ranges (`>=`, `>`), Enum choice lists (`IN`), Closed intervals (`BETWEEN`) | ![Intermediate](https://img.shields.io/badge/-Intermediate-FF9800?style=flat-square) |
-| 07 | **Topic 8** | [Topic_8.md](./Topic_8.md) | [Topic_8.sql](./Topic_8.sql) | `FOREIGN KEY` constraint, Parent-Child tables, Referential integrity, `ON DELETE` / `ON UPDATE CASCADE` | ![Intermediate](https://img.shields.io/badge/-Intermediate-FF9800?style=flat-square) |
-| 08 | **Day 1 DDL** | [Day_1_DDL.md](./Day_1_DDL.md) | [Day_1_DDL.sql](./Day_1_DDL.sql) | Server Inspection (`VERSION()`, `SHOW DATABASES`), CTAS (`CREATE TABLE AS SELECT`), Multi-row inserts | ![Beginner](https://img.shields.io/badge/-Beginner-4CAF50?style=flat-square) |
-| 09 | **Day 1 DDL (Advanced)** | [Day_1_DDL_.md](./Day_1_DDL_.md) | [Day_1_DDL_.sql](./Day_1_DDL_.sql) | Advanced `ALTER TABLE` (`MODIFY`, `ADD`, `DROP`, `RENAME`), `TRUNCATE` vs `DELETE`, `UPDATE` variations | ![Intermediate](https://img.shields.io/badge/-Intermediate-FF9800?style=flat-square) |
-| 10 | **Day 3 Date & Windows** | [Day_3.md](./Day_3.md) | [Day_3.sql](./Day_3.sql) | Date math (`DATE_ADD`, `DATEDIFF`), `IFNULL`, `GROUP BY`, `HAVING`, Window Functions (`RANK`, `LAG`, `LEAD`, Running Totals) | ![Intermediate](https://img.shields.io/badge/-Intermediate-FF9800?style=flat-square) |
-| 11 | **Day 3 Joins & Views** | [Day_3_Joins.md](./Day_3_Joins.md) | [Day_3_Joins.sql](./Day_3_Joins.sql) | `INNER`/`LEFT`/`RIGHT`/`SELF` Joins, Non-Equi Joins, `UNION ALL`, Subqueries, Correlated Subqueries, `VIEW`s, `CASE` | ![Intermediate](https://img.shields.io/badge/-Intermediate-FF9800?style=flat-square) |
-| 12 | **Day 4 Advanced SQL** | [Day_4.md](./Day_4.md) | [Day_4.sql](./Day_4.sql) | CTEs (`WITH`), ACID Transactions (`SAVEPOINT`), DCL Security, Stored Procedures, Functions, Triggers, Indexes | ![Advanced](https://img.shields.io/badge/-Advanced-F44336?style=flat-square) |
-| 13 | **SQL Commands Reference** | [SQL_Commands.md](./SQL_Commands.md) | [SQL_Commands.sql](./SQL_Commands.sql) | Master reference: `WHERE` operators (`=`, `<>`, `IN`, `LIKE '%'`), Range `BETWEEN`, `IS NULL`, String & Math functions | ![Intermediate](https://img.shields.io/badge/-Intermediate-FF9800?style=flat-square) |
-| 14 | **SQL Assignment Day 1** | [SQL_DAY1_ASSIGNMENT.md](./SQL_DAY1_ASSIGNMENT.md) | [SQL_DAY1_ASSIGNMENT.sql](./SQL_DAY1_ASSIGNMENT.sql) | Complete solved solutions for 35 exercises across Topics 1 to 8 (`CREATE TABLE`, Constraints) | ![Beginner](https://img.shields.io/badge/-Beginner-4CAF50?style=flat-square) |
-| 15 | **SQL Assignment Day 2** | [SQL_DAY2_ASSIGNMENT.md](./SQL_DAY2_ASSIGNMENT.md) | [SQL_DAY2_ASSIGNMENT.sql](./SQL_DAY2_ASSIGNMENT.sql) | Complete solved solutions for 83 exercises covering DDL Alterations, String Functions & Math Functions | ![Intermediate](https://img.shields.io/badge/-Intermediate-FF9800?style=flat-square) |
-| 16 | **SQL Assignment Day 3 (SalesDB)** | [SQL_DAY3_ASSIGNMENT.md](./SQL_DAY3_ASSIGNMENT.md) | [SQL_DAY3_ASSIGNMENT.sql](./SQL_DAY3_ASSIGNMENT.sql) | Complete solved solutions for 35 analytical questions using SalesDB: Subqueries, JOIN Aggregations, Views & CTEs | ![Advanced](https://img.shields.io/badge/-Advanced-F44336?style=flat-square) |
+### 📂 01 — DDL and Data Types
+> `CREATE DATABASE`, `USE`, `CREATE TABLE`, `DESC`, `INT`, `VARCHAR`, `DECIMAL`, `FLOAT`, `DATE`, CTAS, Multi-row Inserts
+
+| File | Type | Description |
+|------|------|-------------|
+| [Topic_1.md](./01_DDL_and_Data_Types/Topic_1.md) | 📖 Notes | Basic DDL — Database creation, table definition, data types |
+| [Topic_1.sql](./01_DDL_and_Data_Types/Topic_1.sql) | ⚙️ Script | Executable DDL queries for Topic 1 |
+| [Day_1_DDL.md](./01_DDL_and_Data_Types/Day_1_DDL.md) | 📖 Notes | Server inspection (`VERSION()`, `SHOW DATABASES`), CTAS, multi-row inserts |
+| [Day_1_DDL.sql](./01_DDL_and_Data_Types/Day_1_DDL.sql) | ⚙️ Script | Executable Day 1 DDL queries |
+
+---
+
+### 📂 02 — Constraints
+> `DEFAULT`, `AUTO_INCREMENT`, `NOT NULL`, `PRIMARY KEY`, `UNIQUE`, `CHECK`, `FOREIGN KEY`, Referential Integrity, `ON DELETE CASCADE`
+
+| File | Type | Description |
+|------|------|-------------|
+| [Topic_2_3.md](./02_Constraints/Topic_2_3.md) | 📖 Notes | `DEFAULT` constraint, `CURRENT_DATE`, `AUTO_INCREMENT` & sequence rules |
+| [Topic_2_3.sql](./02_Constraints/Topic_2_3.sql) | ⚙️ Script | Executable queries for Topic 2 & 3 |
+| [Topic_4.md](./02_Constraints/Topic_4.md) | 📖 Notes | `NOT NULL` constraint, `ALTER TABLE MODIFY COLUMN` |
+| [Topic_4.sql](./02_Constraints/Topic_4.sql) | ⚙️ Script | Executable queries for Topic 4 |
+| [Topic_5.md](./02_Constraints/Topic_5.md) | 📖 Notes | `PRIMARY KEY` — entity integrity, uniqueness, B-Tree indexing |
+| [Topic_5.sql](./02_Constraints/Topic_5.sql) | ⚙️ Script | Executable queries for Topic 5 |
+| [Topic_6.md](./02_Constraints/Topic_6.md) | 📖 Notes | `UNIQUE` constraint, NULL handling, `ALTER TABLE RENAME` |
+| [Topic_6.sql](./02_Constraints/Topic_6.sql) | ⚙️ Script | Executable queries for Topic 6 |
+| [Topic_7.md](./02_Constraints/Topic_7.md) | 📖 Notes | `CHECK` constraint — numeric ranges, enum lists, `BETWEEN` |
+| [Topic_7.sql](./02_Constraints/Topic_7.sql) | ⚙️ Script | Executable queries for Topic 7 |
+| [Topic_8.md](./02_Constraints/Topic_8.md) | 📖 Notes | `FOREIGN KEY` — parent-child tables, `ON DELETE/UPDATE CASCADE` |
+| [Topic_8.sql](./02_Constraints/Topic_8.sql) | ⚙️ Script | Executable queries for Topic 8 |
+
+---
+
+### 📂 03 — DML and Alterations
+> `ALTER TABLE` (`MODIFY`, `ADD`, `DROP`, `RENAME`), `TRUNCATE` vs `DELETE`, `UPDATE` variations
+
+| File | Type | Description |
+|------|------|-------------|
+| [Day_1_DDL_.md](./03_DML_and_Alterations/Day_1_DDL_.md) | 📖 Notes | Advanced `ALTER TABLE`, `TRUNCATE` vs `DELETE`, `UPDATE` patterns |
+| [Day_1_DDL_.sql](./03_DML_and_Alterations/Day_1_DDL_.sql) | ⚙️ Script | Executable DML & alteration queries |
+
+---
+
+### 📂 04 — Joins, Subqueries & Views
+> `INNER`, `LEFT`, `RIGHT`, `SELF` Joins, Non-Equi Joins, `UNION ALL`, Subqueries, Correlated Subqueries, `VIEW`, `CASE`
+
+| File | Type | Description |
+|------|------|-------------|
+| [Day_3_Joins.md](./04_Joins_Subqueries_Views/Day_3_Joins.md) | 📖 Notes | All join types, subqueries, UNION, CASE, CREATE VIEW |
+| [Day_3_Joins.sql](./04_Joins_Subqueries_Views/Day_3_Joins.sql) | ⚙️ Script | Executable join & view queries |
+
+---
+
+### 📂 05 — Functions, Aggregates & Window Functions
+> `DATE_ADD`, `DATEDIFF`, `IFNULL`, `GROUP BY`, `HAVING`, `RANK()`, `LAG()`, `LEAD()`, Running Totals, `WHERE` operators
+
+| File | Type | Description |
+|------|------|-------------|
+| [Day_3.md](./05_Functions_Aggregates_Windows/Day_3.md) | 📖 Notes | Date math, aggregation, window functions (RANK, LAG, LEAD, running totals) |
+| [Day_3.sql](./05_Functions_Aggregates_Windows/Day_3.sql) | ⚙️ Script | Executable function & window queries |
+| [SQL_Commands.md](./05_Functions_Aggregates_Windows/SQL_Commands.md) | 📖 Notes | Master reference — `WHERE` operators, `BETWEEN`, `IS NULL`, string & math functions |
+| [SQL_Commands.sql](./05_Functions_Aggregates_Windows/SQL_Commands.sql) | ⚙️ Script | Executable command reference queries |
+
+---
+
+### 📂 06 — Transactions, DCL & Advanced SQL
+> `WITH` (CTEs), ACID, `SAVEPOINT`, `COMMIT`, `ROLLBACK`, DCL Security, Stored Procedures, Functions, Triggers, Indexes
+
+| File | Type | Description |
+|------|------|-------------|
+| [Day_4.md](./06_Transactions_DCL_Advanced/Day_4.md) | 📖 Notes | CTEs, ACID transactions, SAVEPOINT, DCL, stored procedures, functions, triggers, indexes |
+| [Day_4.sql](./06_Transactions_DCL_Advanced/Day_4.sql) | ⚙️ Script | Executable advanced SQL queries |
+
+---
+
+### 📂 07 — Assignments (Solved)
+> Complete solved solutions across all topics
+
+| File | Type | Description | Level |
+|------|------|-------------|-------|
+| [SQL_DAY1_ASSIGNMENT.md](./07_Assignments/SQL_DAY1_ASSIGNMENT.md) | 📖 Notes | 35 solved exercises — `CREATE TABLE`, Constraints (Topics 1–8) | 🟢 Beginner |
+| [SQL_DAY1_ASSIGNMENT.sql](./07_Assignments/SQL_DAY1_ASSIGNMENT.sql) | ⚙️ Script | Executable Day 1 assignment solutions |  |
+| [SQL_DAY2_ASSIGNMENT.md](./07_Assignments/SQL_DAY2_ASSIGNMENT.md) | 📖 Notes | 83 solved exercises — DDL Alterations, String & Math Functions | 🟠 Intermediate |
+| [SQL_DAY2_ASSIGNMENT.sql](./07_Assignments/SQL_DAY2_ASSIGNMENT.sql) | ⚙️ Script | Executable Day 2 assignment solutions |  |
+| [SQL_DAY3_ASSIGNMENT.md](./07_Assignments/SQL_DAY3_ASSIGNMENT.md) | 📖 Notes | 35 solved analytical questions — Subqueries, JOIN Aggregations, Views & CTEs | 🔴 Advanced |
+| [SQL_DAY3_ASSIGNMENT.sql](./07_Assignments/SQL_DAY3_ASSIGNMENT.sql) | ⚙️ Script | Executable Day 3 assignment solutions |  |
 
 ---
 
